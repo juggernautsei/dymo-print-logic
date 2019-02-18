@@ -143,8 +143,7 @@
         function saveSettings()
         {
             settings.currentPrinterName = printersComboBox.value;
-            settings.somethinghere = labelPrintCopies.value;
-            
+
             settings.save();
         }
 
@@ -218,7 +217,6 @@
                                   <UseFullFontHeight>True</UseFullFontHeight>\
                                   <Verticalized>False</Verticalized>\
                                   <StyledText/>\
-                                  <Copies>Copies</Copies>\
                                 </TextObject>\
                                 <Bounds X="332" Y="150" Width="4455" Height="1260" />\
                               </ObjectInfo>\
@@ -252,7 +250,6 @@
                                         <UseFullFontHeight>True</UseFullFontHeight>\
                                         <Verticalized>False</Verticalized>\
                                         <StyledText/>\
-                                        <Copies>Copies</Copies>\
                                         <ShowBarcodeFor9DigitZipOnly>False</ShowBarcodeFor9DigitZipOnly>\
                                         <BarcodePosition>BelowAddress</BarcodePosition>\
                                         <LineFonts/>\
@@ -288,7 +285,6 @@
                                         <UseFullFontHeight>True</UseFullFontHeight>\
                                         <Verticalized>False</Verticalized>\
                                         <StyledText />\
-                                        <Copies>Copies</Copies>\
                                     </TextObject>\
                                     <ObjectMargin Left="0" Top="0" Right="0" Bottom="0" />\
                                     <Length>0</Length>\
