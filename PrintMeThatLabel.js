@@ -132,7 +132,7 @@
         var printerUriTextBox = document.getElementById('printerUriTextBox');
         var addPrinterUriButton = document.getElementById('addPrinterUriButton');
         var clearPrinterUriButton = document.getElementById('clearPrinterUriButton');
-        var printersComboBox = document.getElementById('printersComboBox');
+        var printersComboBoxprintersComboBox = document.getElementById('printersComboBox');
         var jobStatusMessageSpan = document.getElementById('jobStatusMessageSpan');
         var labelPrintCopies = document.getElementById('labelPrintCopies');
 
@@ -399,12 +399,15 @@
                 // we will use LabelSet instead
                 //label.setObjectText(objName, text);
                 var labelSet = new dymo.label.framework.LabelSetBuilder();
+                var printParamsXml = dymo.label.framework.createLabelWriterPrintParamsXml({Copies: copies});
+
                 labelSet.addRecord().setText(objName, text);
+
 
                 // print
                 //label.print(printer.name, null, labelSet.toString());
                 // print and get status
-                var printJob = label.printAndPollStatus(printer.name, null, labelSet.toString(), function(printJob, printJobStatus)
+                var printJob = label.printAndPollStatus(printer.name, printParamsXml, labelSet.toString(), function(printJob, printJobStatus)
                 {
                     // output status
                     var statusStr = 'Job Status: ' + printJobStatus.statusMessage;
